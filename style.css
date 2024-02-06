@@ -1,0 +1,77 @@
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid cyan;
+    border-bottom:2px solid cyan;
+    border-left:2px solid blueviolet;
+    border-right:2px solid blueviolet;
+    animation: rotateColors 5s infinite linear;
+}
+.container label{
+    margin: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.container input{
+    margin: 10px;
+    font-size: 15px;
+    outline: none;
+    height: 20px;
+    border-radius: 15px;
+    border: none;
+    border-bottom: 2px solid cyan;
+    border-top: 2px solid blueviolet;
+    padding: 10px;
+}
+.container button{
+    margin: 10px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(0,255,255);
+    background: linear-gradient(0deg, rgba(0,255,255,1) 29%, rgba(138,43,226,1) 76%);
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    transition: all .1s;
+
+}
+.container button:active{
+    scale: 0.9;
+}
+@keyframes rotateColors {
+    0% {
+        border-color: cyan blueviolet blueviolet cyan;
+        box-shadow: 0 0 100px cyan;
+    }
+    25% {
+        border-color: blueviolet cyan cyan blueviolet;
+        box-shadow: 0 0 100px blueviolet;
+    }
+    50% {
+        border-color: cyan blueviolet blueviolet cyan;
+        box-shadow: 0 0 100px cyan;
+    }
+    75% {
+        border-color: blueviolet cyan cyan blueviolet;
+        box-shadow: 0 0 100px blueviolet;
+    }
+    100% {
+        border-color: cyan blueviolet blueviolet cyan;
+        box-shadow: 0 0 100px cyan;
+    }
+}
